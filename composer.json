@@ -1,5 +1,5 @@
 {
-    "name": "Lib1/TestComposer",
+    "name": "src",
     "description": "Test Composer",
     "type": "git",
     "keywords": ["Lib1"],
