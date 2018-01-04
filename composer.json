@@ -1,17 +1,17 @@
 {
-	"name": "naghmeh/p2",
-	"description": "p2 Demo",
-	"type": "project",
+	"name": "naghmeh/TestComposer",
+	"description": "Demo to use composer ",
+	"type": "Test Project",
 	
 	"require": {
 		"php":">=7.0",
 	        "slim/slim": "^3.9",
 		"monolog/monolog": "^1.0",
-		"emerald/steven_universe_emerald": "dev-naghmeh-sh-patch-1"
+		"Lib1/TestComposer": "master"
 	},
 	"repositories": [
         			{ "type": "git",
-		        	  "url":  "git@github.com:MedStarSiTEL/steven_universe_emerald"
+		        	  "url":  "git@github.com:naghmeh-sh/TestComposer"
 	       			}
 			],
 	"autoload":{
