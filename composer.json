@@ -1,0 +1,42 @@
+{
+	"name": "naghmeh/p2",
+	"description": "p2 Demo",
+	"type": "project",
+	
+	"require": {
+		"php":">=7.0",
+	        "slim/slim": "^3.9",
+		"monolog/monolog": "^1.0",
+		"emerald/steven_universe_emerald": "dev-naghmeh-sh-patch-1"
+	},
+	"repositories": [
+        			{ "type": "git",
+		        	  "url":  "git@github.com:MedStarSiTEL/steven_universe_emerald"
+	       			}
+			],
+	"autoload":{
+		"psr-4":{
+			"PS\\":"src/",
+			"StringUtils\\":"src/"
+	        },
+		"files": ["src/functions.php"]
+	},
+	"scripts":{
+	        "pre-install-cmd": "PS\\ComposerScripts::beforeInstall",
+                "post-install-cmd": [
+                        "PS\\ComposerScripts::afterInstall",
+                        "rm -rf cache"
+                ],
+		"clearCache": "rm -fr cache",
+		"lint": "find src -type f -name '*.php' -exec php -l {} \\;",
+		"runIndex": "php /home/naghmeh/composer/p2/index.php",
+		"start": [
+			"@clearChache",
+			"@composer install",
+			"@lint",
+			"@runIndex"
+		]
+        }
+ 
+  
+}
